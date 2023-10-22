@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+      }
+
+      header {
+        background-color: #f7f7f7;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .submit-btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .submit-btn:hover {
+        background-color: #0056b3;
+      }
+
+      input[type='file'] {
+        border: 1px solid #ccc;
+        padding: 6px;
+        border-radius: 5px;
+      }
+
+      .file-input-container {
+        padding: 10px;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        display: inline-block;
+        background-color: #f9f9f9;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .file-input-container label {
+        display: inline-block;
+        margin-right: 20px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+        font-weight: 500;
+      }
+
+      .file-input-container input[type='radio'] {
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Welcome to the CSV Summary App</h2>
+      <p>
+        This app allows you to upload a CSV file and get the summaries of each table using the
+        format that you want.
+      </p>
+    </header>
+
+    <div class="container">
+      <form method="post" enctype="multipart/form-data">
+        <div class="file-input-container">
+          <input type="file" name="file" />
+        </div>
+
+        <div class="file-input-container">
+          <label>
+            <input type="radio" name="position" value="top" checked /> Descending Order
+          </label>
+          <label> <input type="radio" name="position" value="bottom" /> Ascending Order </label>
+        </div>
+
+        <div class="file-input-container">
+          <input type="number" name="number_input" placeholder="Enter a number" />
+        </div>
+
+        <div class="file-input-container">
+          <button class="submit-btn" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
